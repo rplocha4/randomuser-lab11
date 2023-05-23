@@ -26,7 +26,7 @@ function RandomPeople() {
     setResult(person[filter]);
   }, [filter, person]);
 
-  const fetchPerson = useCallback(async () => {
+  const fetchPerson = useCallback(() => {
     setLoading(true);
     fetch('https://randomuser.me/api/')
       .then((response) => response.json())
